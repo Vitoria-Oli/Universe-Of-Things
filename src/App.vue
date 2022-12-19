@@ -5,12 +5,10 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <h1>WE MASTER YOUR EXPERIENCE</h1>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">Favorites</RouterLink>
-      </nav>
-    </div>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">Favorites</RouterLink>
+    </nav>
   </header>
   
   <RouterView />
@@ -42,6 +40,11 @@ header {
     color: $PrincipalColor;
     font-family: Title;
     font-size: 300%;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+
   }
 }
 
