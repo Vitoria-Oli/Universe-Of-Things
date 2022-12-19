@@ -10,7 +10,9 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/about">Favorites</RouterLink>
     </nav>
   </header>
-  
+  <footer>
+    <h2>@Copyright 2022</h2>
+  </footer>
   <RouterView />
 </template>
 
@@ -23,8 +25,10 @@ import { RouterLink, RouterView } from 'vue-router'
 
 }
 
-header {
 
+header {
+  display: flex;
+  flex-direction: column;
   background-color: $TertiaryColor;
   width:95% ;
   height: 20%;
@@ -41,11 +45,6 @@ header {
     font-family: Title;
     font-size: 300%;
   }
-  nav {
-    display: flex;
-    justify-content: space-between;
-
-  }
 }
 
 @media (min-width: 1024px) {
@@ -53,6 +52,42 @@ header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
+  }
+
+  nav {
+    width: 100%;
+    font-size: 150%;
+    text-align: center;
+  }
+
+  nav a.router-link-exact-active {
+    color: $PrincipalColor;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0 5rem;
+    border-left: 1px solid var(--color-border);
+    font-family: Title;
+    text-decoration: none;
+    color: $QuaternaryColor;
+  }
+
+  nav a:first-of-type {
+    border: 0;
+  }
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  background-color: $TertiaryColor;
+  width:100%;
+  height: 20%;
+  h2{
+    font-size: 150%;
+    font-family: Title;
+    color: $QuaternaryColor;
   }
 }
 </style>
