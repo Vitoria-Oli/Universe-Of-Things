@@ -17,6 +17,9 @@ import {addButton} from "./Scripts/buttonFuction";
 </template>
 <style lang="scss" scoped>
 
+@use "../assets/scss/default" as *;
+@use "../assets/scss/add_hero" as *;
+
 #form{
     border-radius: 5%;
     display: flex;
@@ -25,57 +28,58 @@ import {addButton} from "./Scripts/buttonFuction";
     justify-content: space-around;
     width: 30%;
     height: 80%;
-    background-color: #E34038;
+    background-color: $TertiaryColor;
     float: right ;
     margin-right: 3%;
-}
 
-#name{ 
-   height: 8%; 
-   width: 64%;
-   background-color: #155FCF;
-   border-radius: 7%;
-   border-color:black ;
-   justify-content: center;
-   padding: 2em 2em 2em 2em;
-}
 
-#universe{
-    height: 8%;
+    h1{
+        text-align: center;
+    }
+
+    #foto{
+        border-radius: 60%;
+        width: 40%;  
+    }
+
+    #name{ 
+    height: 8%; 
     width: 64%;
-    background-color: #155FCF;
+    background-color: $SecondaryColor;
     border-radius: 7%;
     border-color:black ;
+    justify-content: center;
     padding: 2em 2em 2em 2em;
-}
+    }
 
-#info{
-    height: 25%;
-    width: 64%;
-    background-color: #155FCF;
-    border-radius: 7%;
-    border-color:black ;
-    padding: 2em 2em 2em 2em;
-}
+    #universe{
+        height: 8%;
+        width: 64%;
+        background-color: $SecondaryColor;
+        border-radius: 7%;
+        border-color:black ;
+        padding: 2em 2em 2em 2em;
+    }
 
-h1{
-    text-align: center;
-}
+    #info{
+        height: 25%;
+        width: 64%;
+        background-color: $SecondaryColor;
+        border-radius: 7%;
+        border-color:black ;
+        padding: 2em 2em 2em 2em;
+    }
 
-#add{
-    border-radius: 10%;
-    background-color: #FFE7E2;
-    width: 40%;
-    height: 10%;
-    border: none; 
-}
+    #add{
+        border-radius: 10%;
+        background-color: $QuaternaryColor;
+        width: 40%;
+        height: 10%;
+        border: none; 
+    }
 
-#foto{
-    border-radius: 60%;
-    width: 40%;  
-}
-
-::placeholder{ 
-    color:black;
+    ::placeholder{ 
+        color:black;
+    }
 }
 </style>
