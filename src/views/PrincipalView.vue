@@ -2,6 +2,7 @@
   import { onBeforeMount, ref } from 'vue';
   import {usePrincipalStore} from '../stores/PrincipalStore';
   import Card from '../components/Card.vue';
+  import addNewHero from '../components/addNewHero.vue';
   const principalStore = usePrincipalStore();
   onBeforeMount(()=>{
     getHeroes();
@@ -25,6 +26,7 @@
     />
     </div>
   </main>
+  <addNewHero/>
 </template>
 <style lang="scss" scoped>
 @use '../assets/scss/main' as *;
