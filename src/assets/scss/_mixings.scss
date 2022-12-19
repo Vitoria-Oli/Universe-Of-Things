@@ -1,7 +1,8 @@
-@mixin displayFlex($FirstParameter, $SecondParameter, $ThirdParameter, $FourthParameter){
+@mixin displayFlex($FirstParameter, $SecondParameter, $ThirdParameter, $FourthParameter, $FifthParameter){
     width: $FirstParameter;
     height: $SecondParameter;
     display: flex;
     flex-direction: $ThirdParameter;
     justify-content: $FourthParameter;
+    align-items: $FifthParameter;
 }

@@ -20,7 +20,15 @@
             type: String,
             default: null,
         }
-    })  
+    });
+    function changeFirstLetterUpperCase(word){
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+    function verifyContent(parameter){
+        return (parameter == '') ? 'Unknown': parameter;
+    }
+    delete props.powerStats.combat;
+    delete props.powerStats.durability;
 </script>
 <template>
     <div class="card">
@@ -29,10 +37,10 @@
             <p>{{name}}</p>
         </div>
         <div class="heroe-info">
-            <p>Nombre real: {{realName}}</p>
-            <p>Alineamiento: {{alignment}}</p>
+            <p><span>Real Name:</span> {{verifyContent(realName)}}</p>
+            <p><span>Alignment:</span> {{ changeFirstLetterUpperCase(alignment) }}</p>
             <div class="heroe-stats">
-                <p>Características: {{powerStats}}</p>
+                <div v-for="item, key in powerStats"><span>{{ changeFirstLetterUpperCase(key) }}:</span> {{item}}</div>
             </div>
         </div>
     </div>
@@ -72,17 +80,16 @@
         display: flex;
         flex-direction: column;
         align-items: left;
-        background-color: $SecondaryColor;
-        color: $QuaternaryColor;
+        color: $PrincipalColor;
         font-weight: bold;
-        font-size: medium;
+        font-size: small;
         border-radius: 5%;
-        margin-top: 10%;
+        margin-top: 2%;
         .heroe-stats {
             width: 90%;
-            margin-top: 5%;
-            font-size: small;
-        
+        }
+        span{
+            font-weight: 900;
         }
     }
 

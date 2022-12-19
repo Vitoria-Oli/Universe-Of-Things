@@ -1,7 +1,7 @@
 <script setup>
   import { onBeforeMount, ref } from 'vue';
   import {usePrincipalStore} from '../stores/PrincipalStore';
-  import Card from '../components/Card.vue';
+  import Carrousel from '../components/Carrousel.vue';
   import addNewHero from '../components/addNewHero.vue';
   const principalStore = usePrincipalStore();
   onBeforeMount(()=>{
@@ -15,28 +15,21 @@
 
 <template>
   <main id="principal-main">
-    <div  class="card-container" v-for="heroe in principalStore.Heroes">
-    <Card
-      :name="heroe.name"
-      :realName="heroe.biography.fullName"
-      :alignment="heroe.biography.alignment"
-      :powerStats="heroe.powerstats"
-      :image="heroe.images.sm"
-      
-    />
-    </div>
+    
+    <Carrousel class="card-container"/>
+    <addNewHero/>
   </main>
-  <addNewHero/>
+  
 </template>
 <style lang="scss" scoped>
 @use '../assets/scss/main' as *;
 #principal-main{
-  @include displayFlex(100%, auto, row, space-evenly);
+  @include displayFlex(100%, 80vh, row, space-evenly,center);
   flex-wrap: wrap;
   background-color: $PrincipalColor;
-  overflow: auto;
+  
   .card-container{
-    @include displayFlex(20%, auto, column, normal);
+    @include displayFlex(60%, 90%, column, normal,normal);
     margin: 2%;
   }
 }
