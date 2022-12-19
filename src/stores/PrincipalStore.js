@@ -10,8 +10,12 @@ export const usePrincipalStore = defineStore ({
             await fetch('https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json')
             .then (response => response.json())
             .then (data => {
-                
-                this.Heroes=data;
+                data.forEach(element => {
+                    if(this.Heroes.length < 100){
+                        this.Heroes.push(element);
+                    }
+                })
+                /* this.Heroes=data; */
                 console.log(this.Heroes);
             })
             .catch(error => {

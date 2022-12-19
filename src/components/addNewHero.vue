@@ -27,10 +27,10 @@ import {addButton} from "./Scripts/buttonFuction";
     align-items: center; 
     justify-content: space-around;
     width: 30%;
-    height: 80%;
+    height: 90%;
     background-color: $TertiaryColor;
     float: right ;
-    margin-right: 3%;
+    margin: 2% 3% 2% 3%;
 
 
     h1{
@@ -46,28 +46,28 @@ import {addButton} from "./Scripts/buttonFuction";
     height: 8%; 
     width: 64%;
     background-color: $SecondaryColor;
-    border-radius: 7%;
+    border-radius: 50px;
     border-color:black ;
     justify-content: center;
-    padding: 2em 2em 2em 2em;
+    
     }
 
     #universe{
         height: 8%;
         width: 64%;
         background-color: $SecondaryColor;
-        border-radius: 7%;
+        border-radius: 50px;
         border-color:black ;
-        padding: 2em 2em 2em 2em;
+        
     }
 
     #info{
         height: 25%;
         width: 64%;
         background-color: $SecondaryColor;
-        border-radius: 7%;
+        border-radius: 20px;
         border-color:black ;
-        padding: 2em 2em 2em 2em;
+        
     }
 
     #add{
