@@ -1,9 +1,12 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+// import { RouterLink, RouterView } from 'vue-router';
+import HeroeApp from './views/HeroeApp.vue';
+
 </script>
 
 <template>
-  <header>
+  <HeroeApp/>
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -15,10 +18,10 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
 
-  <RouterView />
+  <RouterView /> -->
 </template>
 
-<style scoped lang="scss">
+<!-- <style scoped lang="scss">
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -80,4 +83,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style> -->
