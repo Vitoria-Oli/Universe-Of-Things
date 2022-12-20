@@ -15,28 +15,25 @@ import { RouterLink, RouterView } from 'vue-router'
     <img id="img_banner" src="./assets/robliefeld on Twitter.jpg" alt="imagen del Banner">
 
   </div>
+  
+  <RouterView />
   <footer>
     <h2>@Copyright 2022</h2>
   </footer>
-  <RouterView />
 </template>
 
 <style scoped lang="scss">
 @use "../src/assets/scss/default" as *;
-
 @font-face {
   font-family: Title;
   src: url(./assets/Shrikhand/Shrikhand-Regular.ttf);
-
 }
-
-
 header {
   display: flex;
   flex-direction: column;
   background-color: $TertiaryColor;
   width:95% ;
-  height: 20%;
+  height: 15%;
   margin: auto;
   margin-top: 0.9%;
   margin-bottom: 0.9%;
@@ -45,31 +42,26 @@ header {
   border-top-right-radius: 40px 40px;
   border-bottom-left-radius: 40px 40px;
   justify-content: center;
-
   h1{
     color: $PrincipalColor;
     font-family: Title;
     font-size: 300%;
   }
 }
-
-@media (min-width: 1024px) {
+@media (min-width:80px) {
   header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
-
   nav {
     width: 100%;
     font-size: 150%;
     text-align: center;
   }
-
   nav a.router-link-exact-active {
     color: $PrincipalColor;
   }
-
   nav a {
     display: inline-block;
     padding: 0 5rem;
@@ -78,35 +70,24 @@ header {
     text-decoration: none;
     color: $QuaternaryColor;
   }
-
-nav a:first-of-type {
-  border: 0;
+  nav a:first-of-type {
+    border: 0;
+  }
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+#img_banner{
+ width: 100%;
+ height: 350px;
+}
+footer{
+  display: flex;
+  align-items: center;
+  background-color: $TertiaryColor;
+  width:100%;
+  height: 10%;
+  h2{
+    font-size: 150%;
+    font-family: Title;
+    color: $QuaternaryColor;
   }
 }
 </style>
