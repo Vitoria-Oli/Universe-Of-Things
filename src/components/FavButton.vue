@@ -1,9 +1,24 @@
 <script setup>
+import { title } from 'process';
 
+ const props = defineProps ({
+  title:{
+    type: "string",
+    default: null,
+    
+
+  },
+  type:{
+    type: "string",
+    default: 'like',
+
+  }
+
+ })
 </script>
 
 <template>
-      <button>Añadir a Favoritos</button>
+      <button class="['button', ]">{{ title }}</button>
 </template>
 
 <style>
