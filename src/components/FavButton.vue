@@ -1,29 +1,40 @@
 <script setup>
-import { title } from 'process';
 
+
+import { computed } from 'vue';
  const props = defineProps ({
-  title:{
-    type: "string",
-    default: null,
+  name:{
+    type: String,
+    required: true,
     
 
   },
-  type:{
-    type: "string",
+  typeButton:{
+    type: String,
     default: 'like',
 
   }
 
  })
+ const stylesbutton = {
+  like:"button-like",
+  edited:"button-edited",
+ }
+ const getstylebutton = computed (()=>{
+  return stylesbutton[props.type];
+ })
 </script>
 
 <template>
-      <button class="['button', ]">{{ title }}</button>
+      <button :class="['button', getstylebutton]">{{name}}</button>
+    
 </template>
 
-<style>
+<style scoped >
 a {
   background: none;
   border: none;
 }
+
+
 </style>
