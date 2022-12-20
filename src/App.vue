@@ -85,7 +85,7 @@ header {
 
 #img_banner{
  width: 100%;
- height: 500px;
+ height: 350px;
 }
 
 footer{
