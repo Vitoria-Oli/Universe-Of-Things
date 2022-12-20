@@ -5,55 +5,108 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <h1>WE MASTER YOUR EXPERIENCE</h1>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">Favorites</RouterLink>
+    </nav>
   </header>
+  <div >
+    <img id="img_banner" src="./assets/robliefeld on Twitter.jpg" alt="imagen del Banner">
 
+  </div>
+  <footer>
+    <h2>@Copyright 2022</h2>
+  </footer>
   <RouterView />
 </template>
 
 <style scoped lang="scss">
+@use "../src/assets/scss/default" as *;
+
+@font-face {
+  font-family: Title;
+  src: url(./assets/Shrikhand/Shrikhand-Regular.ttf);
+
+}
+
+
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $TertiaryColor;
+  width:95% ;
+  height: 20%;
+  margin: auto;
+  margin-top: 0.9%;
+  margin-bottom: 0.9%;
+  border-top-left-radius: 40px 40px;
+  border-bottom-right-radius: 40px 40px;
+  border-top-right-radius: 40px 40px;
+  border-bottom-left-radius: 40px 40px;
+  justify-content: center;
+
+  h1{
+    color: $PrincipalColor;
+    font-family: Title;
+    font-size: 300%;
+  }
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+  nav {
+    width: 100%;
+    font-size: 150%;
+    text-align: center;
+  }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+  nav a.router-link-exact-active {
+    color: $PrincipalColor;
+  }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
+  nav a {
+    display: inline-block;
+    padding: 0 5rem;
+    border-left: 1px solid var(--color-border);
+    font-family: Title;
+    text-decoration: none;
+    color: $QuaternaryColor;
+  }
 
 nav a:first-of-type {
   border: 0;
 }
 
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
 
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
 </style>
