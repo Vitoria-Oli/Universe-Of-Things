@@ -22,6 +22,9 @@ export const usePrincipalStore = defineStore ({
                 console.log(error);
             })
             .finally(onFinally=>{})
+        },
+        getHeroeId(id){
+            return this.Heroes.find(heroe => heroe.id == id);
         }
     }    
 })

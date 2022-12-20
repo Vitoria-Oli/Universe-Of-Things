@@ -11,8 +11,14 @@
     import 'swiper/scss/scrollbar';
 
     import { usePrincipalStore } from '../stores/PrincipalStore';
+    import { favoriteHeroes } from '../stores/FavouriteStore';
 
     const principalStore = usePrincipalStore();
+    const favoriteStore = favoriteHeroes();
+    function addHeroe(heroeId){
+      const heroe = principalStore.getHeroeId(heroeId);
+      favoriteStore.addHeroeToFavorites(heroe);
+    }
     onBeforeMount(()=>{
     getHeroes();
     })
@@ -43,6 +49,8 @@
         :alignment="heroe.biography.alignment"
         :powerStats="heroe.powerstats"
         :image="heroe.images.sm"
+        :id = "heroe.id"
+        @add-heroe="addHeroe(heroe.id)"
         /></swiper-slide>
     </swiper>
 </template>

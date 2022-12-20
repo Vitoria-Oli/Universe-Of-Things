@@ -1,4 +1,5 @@
 <script setup>
+import FavButton from './FavButton.vue';
     const props = defineProps({
         name: {
             type: String,
@@ -19,7 +20,11 @@
         image: {
             type: String,
             default: null,
-        }
+        },
+        id: {
+            type: Number,
+            default: null,
+        },
     });
     function changeFirstLetterUpperCase(word){
         return word.charAt(0).toUpperCase() + word.slice(1);
@@ -29,6 +34,11 @@
     }
     delete props.powerStats.combat;
     delete props.powerStats.durability;
+    const emits = defineEmits(["addHeroe"]);
+
+    const emitHeroe = ()=>{
+        emits("addHeroe", props.id);
+    } 
 </script>
 <template>
     <div class="card">
@@ -42,6 +52,9 @@
             <div class="heroe-stats">
                 <div v-for="item, key in powerStats"><span>{{ changeFirstLetterUpperCase(key) }}:</span> {{item}}</div>
             </div>
+        </div>
+        <div>
+            <FavButton @click="emitHeroe"/>
         </div>
     </div>
 </template>
