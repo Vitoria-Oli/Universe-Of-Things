@@ -10,6 +10,10 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/about">Favorites</RouterLink>
     </nav>
   </header>
+  <div id="banner">
+    <img src="./assets/robliefeld on Twitter.jpg" alt="imagen del Banner">
+
+  </div>
   <footer>
     <h2>@Copyright 2022</h2>
   </footer>
@@ -33,7 +37,8 @@ header {
   width:95% ;
   height: 20%;
   margin: auto;
-  margin-top: 0.5%;
+  margin-top: 0.9%;
+  margin-bottom: 0.9%;
   border-top-left-radius: 40px 40px;
   border-bottom-right-radius: 40px 40px;
   border-top-right-radius: 40px 40px;
@@ -76,6 +81,10 @@ header {
   nav a:first-of-type {
     border: 0;
   }
+}
+
+#banner{
+ 
 }
 
 footer{
