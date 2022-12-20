@@ -28,27 +28,29 @@ import { RouterLink, RouterView } from 'vue-router'
   font-family: Title;
   src: url(./assets/Shrikhand/Shrikhand-Regular.ttf);
 }
-header {
-  display: flex;
-  flex-direction: column;
-  background-color: $TertiaryColor;
-  width:95% ;
-  height: 15%;
-  margin: auto;
-  margin-top: 0.9%;
-  margin-bottom: 0.9%;
-  border-top-left-radius: 40px 40px;
-  border-bottom-right-radius: 40px 40px;
-  border-top-right-radius: 40px 40px;
-  border-bottom-left-radius: 40px 40px;
-  justify-content: center;
-  h1{
-    color: $PrincipalColor;
-    font-family: Title;
-    font-size: 300%;
+  header {
+    display: flex;
+    flex-direction: column;
+    background-color: $TertiaryColor;
+    width:95% ;
+    // height: 15%;
+    margin: auto;
+    margin-top: 0.9%;
+    margin-bottom: 0.9%;
+    padding: 10px;
+    border-top-left-radius: 40px 40px;
+    border-bottom-right-radius: 40px 40px;
+    border-top-right-radius: 40px 40px;
+    border-bottom-left-radius: 40px 40px;
+    justify-content: center;
+
+    h1{
+      color: $PrincipalColor;
+      font-family: Title;
+      font-size: 5vw;
+    }
   }
-}
-@media (min-width:80px) {
+@media (min-width: 80px){
   header {
     display: flex;
     place-items: center;
@@ -56,7 +58,7 @@ header {
   }
   nav {
     width: 100%;
-    font-size: 150%;
+    font-size: 3vw;
     text-align: center;
   }
   nav a.router-link-exact-active {

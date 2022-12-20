@@ -25,12 +25,15 @@
 @use '../assets/scss/main' as *;
 #principal-main{
   @include displayFlex(100%, 80vh, row, space-evenly,center);
-  flex-wrap: wrap;
   background-color: $PrincipalColor;
   
   .card-container{
     @include displayFlex(60%, 90%, column, normal,normal);
     margin: 2%;
+  }
+  @media (min-width: 300px) and (max-width: 500px){
+    @include displayFlex(100%, 80vh, column, space-evenly,center);
+  background-color: $PrincipalColor;
   }
 }
 </style>

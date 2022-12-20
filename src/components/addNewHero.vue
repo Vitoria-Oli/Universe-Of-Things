@@ -21,13 +21,14 @@ import {addButton} from "./Scripts/buttonFuction";
 @use "../assets/scss/add_hero" as *;
 
 #form{
+    
     border-radius: 5%;
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: space-around;
     width: 30%;
-    height: 90%;
+    height: 35vw;
     background-color: $TertiaryColor;
     float: right ;
     margin: 2% 3% 2% 3%;
@@ -39,12 +40,12 @@ import {addButton} from "./Scripts/buttonFuction";
 
     #foto{
         border-radius: 60%;
-        width: 40%;  
+        width: 9vw;  
     }
 
     #name{ 
-    height: 8%; 
-    width: 64%;
+    height: 3vw; 
+    width: 20vw;
     background-color: $SecondaryColor;
     border-radius: 50px;
     border-color:black ;
@@ -54,8 +55,8 @@ import {addButton} from "./Scripts/buttonFuction";
     }
 
     #universe{
-        height: 8%;
-        width: 64%;
+        height: 3vw;
+        width: 20vw;
         background-color: $SecondaryColor;
         border-radius: 50px;
         border-color:black ;
@@ -64,8 +65,8 @@ import {addButton} from "./Scripts/buttonFuction";
     }
 
     #info{
-        height: 25%;
-        width: 64%;
+        height: 7vw;
+        width: 20vw;
         background-color: $SecondaryColor;
         border-radius: 20px;
         border-color:black ;
@@ -76,8 +77,8 @@ import {addButton} from "./Scripts/buttonFuction";
     #add{
         border-radius: 10%;
         background-color: $QuaternaryColor;
-        width: 40%;
-        height: 10%;
+        width: 20vw;
+        height: 4vw;
         border: none; 
     }
 
