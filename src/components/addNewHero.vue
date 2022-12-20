@@ -49,6 +49,7 @@ import {addButton} from "./Scripts/buttonFuction";
     border-radius: 50px;
     border-color:black ;
     justify-content: center;
+    padding: 2em 2em 2em 2em;
     
     }
 
@@ -58,6 +59,7 @@ import {addButton} from "./Scripts/buttonFuction";
         background-color: $SecondaryColor;
         border-radius: 50px;
         border-color:black ;
+        padding: 2em 2em 2em 2em;
         
     }
 
@@ -67,6 +69,7 @@ import {addButton} from "./Scripts/buttonFuction";
         background-color: $SecondaryColor;
         border-radius: 20px;
         border-color:black ;
+        padding: 2em 2em 2em 2em;
         
     }
 
