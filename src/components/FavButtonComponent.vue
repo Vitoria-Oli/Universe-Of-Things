@@ -1,12 +1,12 @@
 <script setup>
 
-// function moveElements(){
-//   const node = document.getElementById("heroesList");
-//   const clone = node.cloneNode(true);
-//   const copied = document.getElementById("heroesForm");
-//   copied.appendChild(clone);
-//   const nodecopied = copied.appendChild(clone);
-// }
+function moveElements(){
+  const node = document.getElementById("heroesList");
+  const clone = node.cloneNode(true);
+  const copied = document.getElementById("heroesForm");
+  copied.appendChild(clone);
+  const nodecopied = copied.appendChild(clone);
+}
 
 function copyArrys(){
   
