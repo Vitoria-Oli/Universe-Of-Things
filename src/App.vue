@@ -10,8 +10,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/about">Favorites</RouterLink>
     </nav>
   </header>
-  <div id="banner">
-    <img src="./assets/robliefeld on Twitter.jpg" alt="imagen del Banner">
+  <div >
+    <img id="img_banner" src="./assets/robliefeld on Twitter.jpg" alt="imagen del Banner">
 
   </div>
   <footer>
@@ -83,8 +83,9 @@ header {
   }
 }
 
-#banner{
- 
+#img_banner{
+ width: 100%;
+ height: 500px;
 }
 
 footer{
