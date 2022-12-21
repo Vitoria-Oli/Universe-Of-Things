@@ -30,6 +30,7 @@ export const favoriteHeroes= defineStore({
             }
             this.FavHeroes.push(temporalHeroe);
             console.log(this.FavHeroes);
+            alert("You added cart to your favorites side ")
         },
        removeHeroe(id){
         console.log(id);
@@ -37,6 +38,7 @@ export const favoriteHeroes= defineStore({
         let searchindex = this.FavHeroes.indexOf(searchHeroe);
         this.FavHeroes.splice(searchindex,1);
         console.log(this.FavHeroes);
+        alert("You Deleted cart to your favorites side")
        }
     }
 })

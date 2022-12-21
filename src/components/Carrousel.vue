@@ -16,6 +16,7 @@
     const principalStore = usePrincipalStore();
     const favoriteStore = favoriteHeroes();
     function addHeroe(heroeId){
+      
       const heroe = principalStore.getHeroeId(heroeId);
       favoriteStore.addHeroeToFavorites(heroe);
     }
