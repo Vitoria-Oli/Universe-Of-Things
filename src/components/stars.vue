@@ -13,7 +13,7 @@ function checkRank(parameter){
         class="stars"
         value="5"
         v-model="stary"
-        @click="stary[0]"
+        
       />
       <label for="radio1">★</label>
       <input
@@ -71,6 +71,7 @@ function checkRank(parameter){
   label:hover ~ label {
     color: orange;
   }
+  .stars:checked ~ label{color:orange;}
 
 }
 
