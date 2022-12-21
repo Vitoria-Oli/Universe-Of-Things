@@ -18,7 +18,8 @@ import { RouterLink, RouterView } from 'vue-router'
   
   <RouterView />
   <footer>
-    <h2>@Copyright 2022</h2>
+    <h2>@Copyright Hydra 2022</h2>
+    <img id="logoHydra" src="../src/assets/toppng.com-hydra-shield-logo-transparent-hydra-logo-1120x1119.png">
   </footer>
 </template>
 
@@ -87,6 +88,7 @@ import { RouterLink, RouterView } from 'vue-router'
 footer{
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   background-color: $TertiaryColor;
   width:100%;
   height: 10%;
@@ -96,6 +98,11 @@ footer{
     font-family: Title;
     color: $PrincipalColor;
     margin-left: 25vw;
+  }
+  #logoHydra{
+    width: 5%;
+    
+    
   }
 }
 </style>

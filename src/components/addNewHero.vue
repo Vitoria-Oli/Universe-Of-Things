@@ -27,16 +27,16 @@ function createNewHeroe(){
                 },
 
                 powerstats: {
-                    intelligence: 50,
-                    strength: 50,
-                    speed: 50,
-                    durability: 50,
-                    power: 50,
-                    combat: 50
+                    intelligence: Random(10, 100),
+                    strength: Random (10, 100),
+                    speed: Random(10, 100),
+                    durability: Random(10, 100),
+                    power: Random(10, 100),
+                    combat: Random(10, 100),
 
                 }
             }
-            console.log(temporalHeroe);
+        principalStore.addedHeroeToPrincipalStore(temporalHeroe);
             
 }
 
