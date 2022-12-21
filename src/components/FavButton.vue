@@ -12,7 +12,6 @@ import { computed } from 'vue';
   typeButton:{
     type: String,
     default: 'like',
-
   }
 
  })
@@ -21,9 +20,7 @@ import { computed } from 'vue';
 
 <template>
       <button class="button">{{name}}</button>
-
-     
-    
+ 
 </template>
 
 <style  lang="scss" scoped >
@@ -33,7 +30,5 @@ a {
   background: none;
   border: none;
 }
-/* button  */
-
 
 </style>

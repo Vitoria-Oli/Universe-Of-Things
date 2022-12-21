@@ -16,7 +16,9 @@
 <template>
   <main id="principal-main">
     
-    <Carrousel class="card-container"/>
+    <Carrousel 
+    :view="'principal'"
+    class="card-container"/>
     <addNewHero/>
   </main>
   

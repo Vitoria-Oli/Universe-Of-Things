@@ -22,6 +22,14 @@
     onBeforeMount(()=>{
     getHeroes();
     })
+    const props = defineProps({
+      view: {
+        type: String,
+        required: true,
+        default:'principal'
+
+      }
+    })
     const getHeroes = async ()=>{
     await principalStore.fetchHeroes()
   }
@@ -32,7 +40,10 @@
     const onSlideChange = () => {
         console.log('slide change');
     };
-    
+    function defineReder(){
+  return (props.view=='principal') ? principalStore.Heroes: favoriteStore.FavHeroes;
+}
+
   </script>
 <template>
     <swiper
@@ -43,7 +54,7 @@
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
-      <swiper-slide v-for="heroe in principalStore.Heroes"><Card
+      <swiper-slide v-for="heroe in defineReder()"><Card
         :name="heroe.name"
         :realName="heroe.biography.fullName"
         :alignment="heroe.biography.alignment"
