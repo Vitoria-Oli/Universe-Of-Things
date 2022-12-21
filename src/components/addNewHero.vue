@@ -7,12 +7,13 @@
 import { usePrincipalStore } from '../stores/PrincipalStore';
 import { ref } from 'vue';
 
+
 const principalStore = usePrincipalStore();
 
 let name = ref();
 let fullname = ref();
 let alignment = ref();
-let image = '../assets/Perfil.jpg'
+let image = "https://statics.memondo.com/p/99/ccs/2013/10/CC_2187123_a3f29254db3f40c290900cbba1e515b5_spiderman60s_hola_soy_el_superheroe_de_incognito.jpg?cb=9554353"
 function createNewHeroe(){
         const temporalHeroe = {
                 id: 731 + Random(1,100),
@@ -37,7 +38,9 @@ function createNewHeroe(){
                 }
             }
         principalStore.addedHeroeToPrincipalStore(temporalHeroe);
-            
+        name.value='';
+        fullname.value='';
+        alignment.value='';            
 }
 
 function Random (min, max) {
@@ -55,7 +58,7 @@ function Random (min, max) {
         <img src="../assets/Perfil .jpg" alt="" id="photo">
         <input type="text" id="name" placeholder="Name" v-model="name">
         <input type="text" id="full_name" placeholder="Full Name" v-model="fullname">
-        <input type="text" id="info" placeholder="alignment" v-model="alignment">
+        <input type="text" id="info" placeholder="Alignment" v-model="alignment">
         <button id="add" @click="createNewHeroe()">Add</button>
     </div>
 </template>
