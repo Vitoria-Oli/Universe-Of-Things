@@ -1,0 +1,20 @@
+.button {
+    background: #92c7eb;
+     background-image: url("https://i.ibb.co/v4S9z6G/heart.png"  ); 
+    
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 20px;
+    width: 32px;
+    border-radius: 900px;
+    height: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+   }
+   .button:hover
+   {
+    width: 50px;
+    height: 50px;
+   }

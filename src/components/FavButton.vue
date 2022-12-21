@@ -16,25 +16,24 @@ import { computed } from 'vue';
   }
 
  })
- const stylesbutton = {
-  like:"button-like",
-  edited:"button-edited",
- }
- const getstylebutton = computed (()=>{
-  return stylesbutton[props.type];
- })
+ 
 </script>
 
 <template>
-      <button :class="['button', getstylebutton]">{{name}}</button>
+      <button class="button">{{name}}</button>
+
+     
     
 </template>
 
-<style scoped >
+<style  lang="scss" scoped >
+ 
+@use '../assets/scss/button' as *;
 a {
   background: none;
   border: none;
 }
+/* button  */
 
 
 </style>

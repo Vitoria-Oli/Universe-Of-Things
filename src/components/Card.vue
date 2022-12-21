@@ -54,7 +54,7 @@ import FavButton from './FavButton.vue';
             </div>
         </div>
         <div>
-            <FavButton :name="'Favorites'" @click="emitHeroe" />
+            <FavButton :name="''" @click="emitHeroe" />
         </div>
     </div>
 </template>
