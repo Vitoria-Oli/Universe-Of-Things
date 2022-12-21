@@ -1,35 +1,22 @@
-# Universe-Of-Things
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+<h2>Nombre: Universe Of Things </h2>
+<h3>Desarrolladores:</h3>
+<p>Omid, Gabi, Bryan, David, Natalia, Vitoria.</p>
+<h3>Tema escogido:</h3>
+<p>API sobre superhéroes.</p>
+<h3>Objetivo del proyecto:</h3>
+<p>Crear una SPA con Vue de diseño responsive con una Home Page con header, footer y una sección principal con la lista de superhéroes, los que podrán ser añadidos a una sección de favoritos mediante un botón de like. Crear, además, una sección donde añadir a algún superhéroe que no aparezca en la lista predeterminada con su respectivo nombre, información e imagen.</p>
+<h3>Requisitos pedidos:</h3>
+<ul>
+<li>SPA con Vue.</li>
+<li>Responsive Design.</li>
+<li>Homepage con header, footer, sección principal y vista de favoritos.</li></li>
+<li>En la página de favoritos se podrá suprimir los elementos agregados, modificar el título y/o contenido así como valorar mediante un metodo de valoración cada uno de los elementos y tener la opción de agregar un elemento</li>
+</ul>
+<h3>Herramientas usadas</h3>
+<ul>
+<li>Vue</li>
+<li>Sass</li>
+<li>Javascript</li>
+<li>Vue Router</li>
+<li>Vue Pinia</li>
+</ul>
