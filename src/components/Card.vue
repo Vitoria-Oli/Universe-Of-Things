@@ -1,5 +1,6 @@
 <script setup>
 import FavButton from './FavButton.vue';
+import stars from './stars.vue';
     const props = defineProps({
         name: {
             type: String,
@@ -53,8 +54,9 @@ import FavButton from './FavButton.vue';
                 <div v-for="item, key in powerStats"><span>{{ changeFirstLetterUpperCase(key) }}:</span> {{item}}</div>
             </div>
         </div>
-        <div>
+        <div class="button-section">
             <FavButton :name="''" @click="emitHeroe" />
+           <stars></stars>
         </div>
     </div>
 </template>
@@ -104,6 +106,10 @@ import FavButton from './FavButton.vue';
         span{
             font-weight: 900;
         }
+    }
+    .button-section{
+        @include displayFlex(80%, 5% , row, space-evenly , center);
+
     }
 
 }
