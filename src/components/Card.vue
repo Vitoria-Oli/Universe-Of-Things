@@ -1,6 +1,6 @@
 <script setup>
 import FavButton from './FavButton.vue';
-import stars from './stars.vue';
+import Stars from './Stars.vue';
     const props = defineProps({
         name: {
             type: String,
@@ -56,7 +56,7 @@ import stars from './stars.vue';
         </div>
         <div class="button-section">
             <FavButton :name="''" @click="emitHeroe" />
-           <stars></stars>
+            <Stars></Stars>
         </div>
     </div>
 </template>

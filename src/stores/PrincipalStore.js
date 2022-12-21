@@ -25,6 +25,9 @@ export const usePrincipalStore = defineStore ({
         },
         getHeroeId(id){
             return this.Heroes.find(heroe => heroe.id == id);
+        },
+        addedHeroeToPrincipalStore(heroe){
+            
         }
     }    
 })

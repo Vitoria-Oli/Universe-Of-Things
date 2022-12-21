@@ -1,18 +1,62 @@
 <script setup>
-import {nameInput} from "./Scripts/nameInput";
-import {universeInput} from "./Scripts/universeInput";
-import {infoInput} from "./Scripts/infoInput";
-import {addButton} from "./Scripts/buttonFuction";
+// import {nameInput} from "./Scripts/nameInput";
+// import {universeInput} from "./Scripts/universeInput";
+// import {infoInput} from "./Scripts/infoInput";
+// import {addButton} from "./Scripts/buttonFuction";
+// addButton(), nameInput(), universeInput(), infoInput()
+import { usePrincipalStore } from '../stores/PrincipalStore';
+import { ref } from 'vue';
+
+const principalStore = usePrincipalStore();
+
+let name = ref();
+let fullname = ref();
+let alignment = ref();
+let image = '../assets/Perfil.jpg'
+function createNewHeroe(){
+        const temporalHeroe = {
+                id: 731 + Random(1,100),
+                name: name.value,
+                biography : {
+                    fullName: fullname.value,
+                    alignment: alignment.value,
+                },
+
+                images : {
+                    sm: image,
+                },
+
+                powerstats: {
+                    intelligence: 50,
+                    strength: 50,
+                    speed: 50,
+                    durability: 50,
+                    power: 50,
+                    combat: 50
+
+                }
+            }
+            console.log(temporalHeroe);
+            
+}
+
+function Random (min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); 
+}
+
+
 </script>
 
 <template>
     <div id="form">
         <h1>Add Hero</h1>
         <img src="../assets/Perfil .jpg" alt="" id="photo">
-        <input type="text" id="name" placeholder="Name" >
-        <input type="text" id="full_name" placeholder="Full Name">
-        <input type="text" id="info" placeholder="Information">
-        <button id="add" @click="addButton(), nameInput(), universeInput(), infoInput()">Add</button>
+        <input type="text" id="name" placeholder="Name" v-model="name">
+        <input type="text" id="full_name" placeholder="Full Name" v-model="fullname">
+        <input type="text" id="info" placeholder="alignment" v-model="alignment">
+        <button id="add" @click="createNewHeroe()">Add</button>
     </div>
 </template>
 <style lang="scss" scoped>
