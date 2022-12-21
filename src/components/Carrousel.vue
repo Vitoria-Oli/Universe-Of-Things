@@ -1,7 +1,10 @@
 <script setup>
     import { Navigation, Scrollbar, A11y } from 'swiper';
     import { Swiper, SwiperSlide } from 'swiper/vue';
-    
+
+    import { usePrincipalStore } from '../stores/PrincipalStore';
+    import { favoriteHeroes } from '../stores/FavouriteStore';
+
     import Card from './Card.vue';
     import { onBeforeMount, ref } from 'vue';
   
@@ -9,9 +12,6 @@
     import 'swiper/scss/navigation';
     import 'swiper/scss/pagination';
     import 'swiper/scss/scrollbar';
-
-    import { usePrincipalStore } from '../stores/PrincipalStore';
-    import { favoriteHeroes } from '../stores/FavouriteStore';
 
     const principalStore = usePrincipalStore();
     const favoriteStore = favoriteHeroes();
@@ -50,12 +50,14 @@
     <swiper
       :modules="[Navigation, Scrollbar, A11y]"
       :slides-per-view="2"
+      :breakpoints="{600: {slidesPerView: 2, spaceBetween: 40, }, 320:{slidesPerView:1, spaceBetween: 40}}"
       :space-between="50"
       navigation
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
-      <swiper-slide v-for="heroe in defineReder()"><Card
+      <swiper-slide v-for="heroe in defineReder()">
+        <Card
         :name="heroe.name"
         :realName="heroe.biography.fullName"
         :alignment="heroe.biography.alignment"
