@@ -33,8 +33,12 @@ import Stars from './Stars.vue';
     function verifyContent(parameter){
         return (parameter == '') ? 'Unknown': parameter;
     }
-    delete props.powerStats.combat;
-    delete props.powerStats.durability;
+    function deleteKeys(object){
+        
+        delete object.combat;
+        delete object.durability;
+        return object
+    }
     const emits = defineEmits(["addHeroe"]);
 
     const emitHeroe = ()=>{
@@ -51,7 +55,7 @@ import Stars from './Stars.vue';
             <p><span>Real Name:</span> {{verifyContent(realName)}}</p>
             <p><span>Alignment:</span> {{ changeFirstLetterUpperCase(alignment) }}</p>
             <div class="heroe-stats">
-                <div v-for="item, key in powerStats"><span>{{ changeFirstLetterUpperCase(key) }}:</span> {{item}}</div>
+                <div v-for="item, key in deleteKeys(powerStats)"><span>{{ changeFirstLetterUpperCase(key) }}:</span> {{item}}</div>
             </div>
         </div>
         <div class="button-section">
