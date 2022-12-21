@@ -109,7 +109,7 @@ import stars from './stars.vue';
     }
     .button-section{
         @include displayFlex(80%, 5% , row, space-evenly , center);
-
+        margin-top: 2.5vh;
     }
 
 }
