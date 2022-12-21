@@ -32,7 +32,7 @@
     margin: 2%;
   }
   @media (min-width: 300px) and (max-width: 500px){
-    @include displayFlex(100%, 80vh, column, space-evenly,center);
+    @include displayFlex(100%, 120vh, column, space-evenly,center);
   background-color: $PrincipalColor;
   }
 }

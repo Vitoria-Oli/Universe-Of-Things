@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/about">Favorites</RouterLink>
     </nav>
   </header>
-  <div >
+  <div>
     <img id="img_banner" src="./assets/robliefeld on Twitter.jpg" alt="imagen del Banner">
 
   </div>
@@ -33,7 +33,6 @@ import { RouterLink, RouterView } from 'vue-router'
     flex-direction: column;
     background-color: $TertiaryColor;
     width:95% ;
-    // height: 15%;
     margin: auto;
     margin-top: 0.9%;
     margin-bottom: 0.9%;
@@ -56,6 +55,7 @@ import { RouterLink, RouterView } from 'vue-router'
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
+  
   nav {
     width: 100%;
     font-size: 3vw;
@@ -64,6 +64,7 @@ import { RouterLink, RouterView } from 'vue-router'
   nav a.router-link-exact-active {
     color: $PrincipalColor;
   }
+
   nav a {
     display: inline-block;
     padding: 0 5rem;
@@ -72,24 +73,29 @@ import { RouterLink, RouterView } from 'vue-router'
     text-decoration: none;
     color: $QuaternaryColor;
   }
+
   nav a:first-of-type {
     border: 0;
   }
 }
+
 #img_banner{
  width: 100%;
- height: 350px;
+ height: 50vh;
 }
+
 footer{
   display: flex;
   align-items: center;
   background-color: $TertiaryColor;
   width:100%;
   height: 10%;
+
   h2{
-    font-size: 150%;
+    font-size: 3vw;
     font-family: Title;
-    color: $QuaternaryColor;
+    color: $PrincipalColor;
+    margin-left: 25vw;
   }
 }
 </style>

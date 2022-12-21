@@ -29,7 +29,7 @@ const onSlideChange = () => {
 
 </script>
 <template>
-  <swiper :modules="[Navigation, Scrollbar, A11y]" :slides-per-view="1" :space-between="50" navigation
+  <swiper :modules="[Navigation, Scrollbar, A11y]" :slides-per-view="2" :breakpoints="{600: {slidesPerView: 2, spaceBetween: 40, }, 320:{slidesPerView:1, spaceBetween: 40}}" :space-between="50" navigation
     @swiper="onSwiper" @slideChange="onSlideChange">
     <swiper-slide v-for="heroe in principalStore.Heroes">
       <Card :name="heroe.name" :realName="heroe.biography.fullName" :alignment="heroe.biography.alignment"
