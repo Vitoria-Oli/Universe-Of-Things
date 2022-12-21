@@ -16,7 +16,9 @@
 <ul>
 <li>Vue</li>
 <li>Sass</li>
-<li>Javascript</li>
+<li>Jira</li>
+<li>Figma</li>
+<li>Github</li>
 <li>Vue Router</li>
 <li>Vue Pinia</li>
 </ul>
