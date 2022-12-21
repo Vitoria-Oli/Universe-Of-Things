@@ -12,14 +12,15 @@ import Carrousel from '../components/Carrousel.vue'
 </template>
 
 <style lang="scss" scoped>
+  @use "../assets/scss/default" as *;
 
   .about {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    background-color: $PrincipalColor;
     .carrousel{
-      height: 100%;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
       width: 60%;
     }
   }
