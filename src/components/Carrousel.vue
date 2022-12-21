@@ -11,10 +11,25 @@
     import 'swiper/scss/scrollbar';
 
     import { usePrincipalStore } from '../stores/PrincipalStore';
+    import { favoriteHeroes } from '../stores/FavouriteStore';
 
     const principalStore = usePrincipalStore();
+    const favoriteStore = favoriteHeroes();
+    function addHeroe(heroeId){
+      
+      const heroe = principalStore.getHeroeId(heroeId);
+      favoriteStore.addHeroeToFavorites(heroe);
+    }
     onBeforeMount(()=>{
     getHeroes();
+    })
+    const props = defineProps({
+      view: {
+        type: String,
+        required: true,
+        default:'principal'
+
+      }
     })
     const getHeroes = async ()=>{
     await principalStore.fetchHeroes()
@@ -26,7 +41,10 @@
     const onSlideChange = () => {
         console.log('slide change');
     };
-    
+    function defineReder(){
+  return (props.view=='principal') ? principalStore.Heroes: favoriteStore.FavHeroes;
+}
+
   </script>
 <template>
     <swiper
@@ -37,12 +55,14 @@
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
-      <swiper-slide v-for="heroe in principalStore.Heroes"><Card
+      <swiper-slide v-for="heroe in defineReder()"><Card
         :name="heroe.name"
         :realName="heroe.biography.fullName"
         :alignment="heroe.biography.alignment"
         :powerStats="heroe.powerstats"
         :image="heroe.images.sm"
+        :id = "heroe.id"
+        @add-heroe="addHeroe(heroe.id)"
         /></swiper-slide>
     </swiper>
 </template>
