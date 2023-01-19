@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as s,a as _,b as t}from"./index-356de33c.js";const o={class:"about"},c={__name:"FavoritesView",setup(r){return(i,n)=>(a(),s("div",o,[_(t,{class:"carrousel",view:"about"})]))}},l=e(c,[["__scopeId","data-v-823a2207"]]);export{l as default};
