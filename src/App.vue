@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </nav>
   </header>
   <div>
-    <img id="img_banner" src="./assets/robliefeld on Twitter.jpg" alt="imagen del Banner">
+    <img id="img_banner" src="./assets/robliefeld-on-Twitter.jpg" alt="imagen del Banner">
 
   </div>
   

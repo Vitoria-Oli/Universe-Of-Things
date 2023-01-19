@@ -55,7 +55,7 @@ function Random (min, max) {
 <template>
     <div id="form">
         <h1>Add Hero</h1>
-        <img src="../assets/Perfil .jpg" alt="" id="photo">
+        <img src="../assets/Perfil.jpg" alt="" id="photo">
         <input type="text" id="name" placeholder="Name" v-model="name">
         <input type="text" id="full_name" placeholder="Full Name" v-model="fullname">
         <input type="text" id="info" placeholder="Alignment" v-model="alignment">
